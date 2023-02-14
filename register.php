@@ -4,11 +4,11 @@ session_start();
 
 // TODO 2: ROUTING
 if (!empty($_SESSION['auth'])) {
-    header('Location: /admin.html');
+    header('Location: /admin.php');
     die;
 }
 
-// TODO 3.raw: CODE by REQUEST METHODS (ACTIONS) GET, POST, etc. (handle data from request): 1) validate 2) working with data source 3.raw) transforming data
+// TODO 3: CODE by REQUEST METHODS (ACTIONS) GET, POST, etc. (handle data from request): 1) validate 2) working with data source 3) transforming data
 
 // 1. Create empty $infoMessage
 $infoMessage = '';
@@ -16,7 +16,7 @@ $infoMessage = '';
 // 2. handle form data
 if (!empty($_POST['email']) && !empty($_POST['password'])) {
 
-    // 3.raw. Check that user has already existed
+    // 3. Check that user has already existed
     $isAlreadyRegistered = false;
     $fileUsers = 'users.csv';
 
@@ -33,7 +33,7 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
                     $isAlreadyRegistered = true;
 
                     $infoMessage = "Такой пользователь уже существует! Перейдите на страницу входа. ";
-                    $infoMessage .= "<a href='/login.html'>Страница входа</a>";
+                    $infoMessage .= "<a href='/login.php'>Страница входа</a>";
                 }
             }
         }
@@ -44,7 +44,7 @@ if (!empty($_POST['email']) && !empty($_POST['password'])) {
         $aNewUser = [$_POST['email'] => $_POST['password']];
         file_put_contents("users.csv", json_encode($aNewUser) . "\n", FILE_APPEND);
 
-        header('Location: /login.html');
+        header('Location: /login.php');
         die;
     }
 

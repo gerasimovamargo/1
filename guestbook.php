@@ -4,7 +4,7 @@ session_start();
 
 // TODO 2: ROUTING
 
-// TODO 3.raw: CODE by REQUEST METHODS (ACTIONS) GET, POST, etc. (handle data from request): 1) validate 2) working with data source 3.raw) transforming data
+// TODO 3: CODE by REQUEST METHODS (ACTIONS) GET, POST, etc. (handle data from request): 1) validate 2) working with data source 3) transforming data
 
 // TODO 4: RENDER: 1) view (html) 2) data (from php)
 
@@ -30,10 +30,34 @@ session_start();
         </div>
         <div class="card-body">
 
-            <!-- TODO: render php data   -->
+            <div class="row">
+                <div class="col-sm-6">
+
+                 <!-- TODO: create guestBook html form   -->
+
+                </div>
+            </div>
 
         </div>
     </div>
+
+    <br>
+
+    <div class="card card-primary">
+        <div class="card-header bg-body-secondary text-dark">
+            Сomments
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm-6">
+
+                    <!-- TODO: render guestBook comments   -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 </body>

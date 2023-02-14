@@ -4,11 +4,11 @@ session_start();
 
 // TODO 2: ROUTING
 if (empty($_SESSION['auth'])) {
-    header('Location: /index.html');
+    header('Location: /index.php');
     die;
 }
 
-// TODO 3.raw: CODE by REQUEST METHODS (ACTIONS) GET, POST, etc. (handle data from request): 1) validate 2) working with data source 3.raw) transforming data
+// TODO 3: CODE by REQUEST METHODS (ACTIONS) GET, POST, etc. (handle data from request): 1) validate 2) working with data source 3) transforming data
 
 // TODO 4: RENDER: 1) view (html) 2) data (from php)
 
